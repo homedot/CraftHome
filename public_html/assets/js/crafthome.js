@@ -32,14 +32,24 @@ $(document).ready(function(){
 
 new WOW().init();
 
-// function initMap() {
-//     var uluru = {lat: 37.227837, lng: -95.700513};
-//     var map = new google.maps.Map(document.getElementById('map'), {
-//       zoom: 8,
-//       center: uluru
-//     });
-//     var marker = new google.maps.Marker({
-//       position: uluru,
-//       map: map
-//     });
-//  }
+
+
+
+
+
+
+
+  // Scroll animation trigger
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+
