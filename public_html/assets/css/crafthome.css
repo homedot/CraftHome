@@ -52,7 +52,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(0, 0, 0);
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -67,7 +67,7 @@ body {
   line-height: 1.5;
   color: #f8f9fa;
   text-align: left;
-  background-color: #343a40;
+  background-color: #000000;
 }
 
 [tabindex="-1"]:focus {
@@ -477,7 +477,7 @@ mark,
 .blockquote-footer {
   display: block;
   font-size: 80%;
-  color: #6c757d;
+  color: #000000;
 }
 
 .blockquote-footer::before {
@@ -1866,7 +1866,7 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgb(0, 0, 0);
 }
 
 .table-hover tbody tr:hover {
@@ -4443,6 +4443,11 @@ input[type="button"].btn-block {
           justify-content: space-between;
   padding: 1rem 1rem;
 }
+
+.navbar.hide {
+  top: -200px;
+}
+
 
 .navbar > .container,
 .navbar > .container-fluid {
@@ -7082,7 +7087,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: white !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -10849,7 +10854,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #f8f9fa;
-  background: #343a40;
+  background: #000000;
   box-sizing: border-box;
 }
 
@@ -11086,7 +11091,7 @@ pre {
 
 .header .overlay {
   height: 100%;
-  background:#21242980;
+  /* background:#21242980; */
   display: -webkit-flex;
   display: -ms-flex;
   display: -webkit-box;
@@ -11144,14 +11149,14 @@ pre {
 }
 
 .has-img-bg {
-  background: url(../imgs/a.jpg) no-repeat center center;
+  background: url(../imgs/about.jpg) no-repeat center center;
   background-size: cover;
 }
 
-.has-img-bg1 {
+/* .has-img-bg1 {
   background: url(../imgs/b.jpg) no-repeat center center;
   background-size: cover;
-}
+} */
 
 .has-bg-overlay {
   position: relative;
@@ -11200,6 +11205,7 @@ pre {
 
 .section-title {
   font-size: 4rem;
+  color: #000000;
 }
 
 .has-height-xs {
@@ -11310,3 +11316,175 @@ justify-content: center;
   cursor: pointer;
   transition: 1s;
 } */
+
+
+
+/* Mobile-friendly adjustment */
+@media (max-width: 576px) {
+  .fullscreen-portrait-video {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Photo Gallery Section */
+.project-gallery-section {
+  background: #111;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.gallery-heading h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.gallery-heading p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+
+.expertise-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.expertise-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.expertise-item:hover {
+  transform: translateY(-5px);
+}
+
+.expertise-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.expertise-item h3 {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #333;
+}
+  
+
+/* Floating */
+
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.floating-buttons a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.floating-buttons a:hover {
+  transform: scale(1.1);
+}
+
+.floating-buttons img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Animation Classes */
+.animate {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.typing-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.mute-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+@media(max-width: 600px) {
+  .reel {
+    width: 180px;
+    height: 320px;
+  }}
